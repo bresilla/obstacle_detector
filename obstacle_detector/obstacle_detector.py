@@ -32,7 +32,7 @@ class ObstacleDetector(Node):
         global points
         feedback_msg = Obstacle.Feedback()
 
-        for e in range(100):
+        for e in range(10):
             self.get_logger().info('No obstacle detected')
             obstacle = Bool()
             obstacle.data = False
@@ -44,24 +44,31 @@ class ObstacleDetector(Node):
         obstacle = Bool()
         obstacle.data = True
         feedback_msg.obstacle = obstacle
+
         obs_type = Int8()
         obs_type.data = 1
         feedback_msg.type = obs_type
+
         obs_detected_before = Bool()
         obs_detected_before.data = False
         feedback_msg.detected_before = obs_detected_before
+
         obs_distance = Float32()
         obs_distance.data = 2.0
         feedback_msg.distance = obs_distance
+
         obs_has_size = Bool()
         obs_has_size.data = True
         feedback_msg.has_size = obs_has_size
+
         obs_size = Float32MultiArray()
         obs_size.data = [1.0, 1.0, 1.0]
         feedback_msg.size = obs_size
+
         obs_has_position = Bool()
         obs_has_position.data = True
         feedback_msg.has_position = obs_has_position
+        
         obs_position = Float32MultiArray()
         obs_position.data = [1.0, 1.0, 1.0]
         feedback_msg.loc_position = obs_position
