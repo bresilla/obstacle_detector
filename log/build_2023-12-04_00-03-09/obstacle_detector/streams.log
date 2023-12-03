@@ -1,0 +1,44 @@
+[1.729s] Invoking command in '/doc/code/ROBO/obstacle_detector/src/obstacle_detector': PYTHONPATH=/doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/prefix_override:/doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/obstacle_detector build --build-base /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build install --record /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/install.log --single-version-externally-managed
+[2.179s] running egg_info
+[2.179s] creating build/obstacle_detector/obstacle_detector.egg-info
+[2.180s] writing build/obstacle_detector/obstacle_detector.egg-info/PKG-INFO
+[2.180s] writing dependency_links to build/obstacle_detector/obstacle_detector.egg-info/dependency_links.txt
+[2.180s] writing entry points to build/obstacle_detector/obstacle_detector.egg-info/entry_points.txt
+[2.180s] writing requirements to build/obstacle_detector/obstacle_detector.egg-info/requires.txt
+[2.180s] writing top-level names to build/obstacle_detector/obstacle_detector.egg-info/top_level.txt
+[2.180s] writing manifest file 'build/obstacle_detector/obstacle_detector.egg-info/SOURCES.txt'
+[2.182s] reading manifest file 'build/obstacle_detector/obstacle_detector.egg-info/SOURCES.txt'
+[2.184s] writing manifest file 'build/obstacle_detector/obstacle_detector.egg-info/SOURCES.txt'
+[2.184s] running build
+[2.184s] running build_py
+[2.184s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build
+[2.184s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib
+[2.184s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+[2.184s] copying obstacle_detector/__init__.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+[2.185s] copying obstacle_detector/obstacle_feedback.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+[2.185s] copying obstacle_detector/obstacle_detector.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+[2.185s] running install
+[2.185s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.185s]   warnings.warn(
+[2.185s] running install_lib
+[2.187s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+[2.187s] copying /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector/__init__.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+[2.187s] copying /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector/obstacle_feedback.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+[2.187s] copying /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector/obstacle_detector.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+[2.187s] byte-compiling /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector/__init__.py to __init__.cpython-310.pyc
+[2.188s] byte-compiling /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector/obstacle_feedback.py to obstacle_feedback.cpython-310.pyc
+[2.188s] byte-compiling /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector/obstacle_detector.py to obstacle_detector.cpython-310.pyc
+[2.190s] running install_data
+[2.191s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index
+[2.191s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index/resource_index
+[2.191s] creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index/resource_index/packages
+[2.191s] copying resource/obstacle_detector -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index/resource_index/packages
+[2.191s] copying package.xml -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/obstacle_detector
+[2.191s] running install_egg_info
+[2.193s] Copying build/obstacle_detector/obstacle_detector.egg-info to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector-0.0.0-py3.10.egg-info
+[2.194s] running install_scripts
+[2.221s] Installing feedback_test script to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/obstacle_detector
+[2.221s] Installing obstacle_detector script to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/obstacle_detector
+[2.222s] Installing obstacle_feedback script to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/obstacle_detector
+[2.222s] writing list of installed files to '/doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/install.log'
+[2.243s] Invoked command in '/doc/code/ROBO/obstacle_detector/src/obstacle_detector' returned '0': PYTHONPATH=/doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/prefix_override:/doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/obstacle_detector build --build-base /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build install --record /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/install.log --single-version-externally-managed

@@ -43,6 +43,7 @@ class ObstacleFeedback(Node):
         if detection == True:
             goal_msg = Nav.Goal()
             goal_msg.abort.data = True
+            self._navclient.wait_for_server()
 
             self.get_logger().info('Obstacle detected')
             self.get_logger().info('Obstacle type: {0}'.format(feedback.type.data))
@@ -54,7 +55,6 @@ class ObstacleFeedback(Node):
             # self.get_logger().info('Obstacle local position: {0}'.format(feedback.loc_position.data))
             self.get_logger().info('------------------------------------------------------------')
             
-            self._navclient.wait_for_server()
             await self._navclient.send_goal_async(goal_msg)
         else:
             if self.counter % 1000 == 0:

@@ -1,0 +1,40 @@
+running egg_info
+creating build/obstacle_detector/obstacle_detector.egg-info
+writing build/obstacle_detector/obstacle_detector.egg-info/PKG-INFO
+writing dependency_links to build/obstacle_detector/obstacle_detector.egg-info/dependency_links.txt
+writing entry points to build/obstacle_detector/obstacle_detector.egg-info/entry_points.txt
+writing requirements to build/obstacle_detector/obstacle_detector.egg-info/requires.txt
+writing top-level names to build/obstacle_detector/obstacle_detector.egg-info/top_level.txt
+writing manifest file 'build/obstacle_detector/obstacle_detector.egg-info/SOURCES.txt'
+reading manifest file 'build/obstacle_detector/obstacle_detector.egg-info/SOURCES.txt'
+writing manifest file 'build/obstacle_detector/obstacle_detector.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+copying obstacle_detector/__init__.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+copying obstacle_detector/obstacle_feedback.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+copying obstacle_detector/obstacle_detector.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector
+running install
+running install_lib
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+copying /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector/__init__.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+copying /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector/obstacle_feedback.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+copying /doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/build/lib/obstacle_detector/obstacle_detector.py -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector
+byte-compiling /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector/__init__.py to __init__.cpython-310.pyc
+byte-compiling /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector/obstacle_feedback.py to obstacle_feedback.cpython-310.pyc
+byte-compiling /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector/obstacle_detector.py to obstacle_detector.cpython-310.pyc
+running install_data
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index/resource_index
+creating /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index/resource_index/packages
+copying resource/obstacle_detector -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/ament_index/resource_index/packages
+copying package.xml -> /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/share/obstacle_detector
+running install_egg_info
+Copying build/obstacle_detector/obstacle_detector.egg-info to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/python3.10/site-packages/obstacle_detector-0.0.0-py3.10.egg-info
+running install_scripts
+Installing feedback_test script to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/obstacle_detector
+Installing obstacle_detector script to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/obstacle_detector
+Installing obstacle_feedback script to /doc/code/ROBO/obstacle_detector/src/obstacle_detector/install/obstacle_detector/lib/obstacle_detector
+writing list of installed files to '/doc/code/ROBO/obstacle_detector/src/obstacle_detector/build/obstacle_detector/install.log'
