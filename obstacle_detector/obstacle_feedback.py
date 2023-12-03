@@ -3,18 +3,16 @@ from rclpy.action import ActionClient
 from rclpy.node import Node
 import rclpy
 from rclpy.node import Node
-from rclpy.action import ActionServer, CancelResponse
-from rclpy.callback_groups import ReentrantCallbackGroup
-from handy_msgs.action import Obstacle
-from std_msgs.msg import Bool, Float32MultiArray, Float32, Int8
-import time
+from handy_msgs.action import Obstacle, Nav
 
 
 class ObstacleFeedback(Node):
-
     def __init__(self):
         super().__init__('OBSTACLE_FEEDBACK')
         self._action_client = ActionClient(self, Obstacle, '/obstacle_detector')
+        self._navclient = ActionClient(self, Nav, '/navigation')
+        self.counter = 0
+
 
     def send_goal(self):
         goal_msg = Obstacle.Goal()
@@ -38,10 +36,15 @@ class ObstacleFeedback(Node):
         # self.get_logger().info('Result: {0}'.format(result.sequence))
         rclpy.shutdown()
 
-    def feedback_callback(self, feedback_msg):
+    async def feedback_callback(self, feedback_msg):
+        self.counter += 1
         feedback = feedback_msg.feedback
         detection = feedback.obstacle.data
         if detection == True:
+            goal_msg = Nav.Goal()
+            goal_msg.abort.data = True
+            self._navclient.wait_for_server()
+
             self.get_logger().info('Obstacle detected')
             self.get_logger().info('Obstacle type: {0}'.format(feedback.type.data))
             self.get_logger().info('Obstacle detected before: {0}'.format(feedback.detected_before.data))
@@ -49,9 +52,13 @@ class ObstacleFeedback(Node):
             self.get_logger().info('Obstacle has size: {0}'.format(feedback.has_size.data))
             self.get_logger().info('Obstacle size: {0}'.format(feedback.size.data))
             self.get_logger().info('Obstacle has position: {0}'.format(feedback.has_position.data))
-            self.get_logger().info('Obstacle local position: {0}'.format(feedback.loc_position.data))
+            # self.get_logger().info('Obstacle local position: {0}'.format(feedback.loc_position.data))
+            self.get_logger().info('------------------------------------------------------------')
+            
+            await self._navclient.send_goal_async(goal_msg)
         else:
-            self.get_logger().info('No obstacle detected')
+            if self.counter % 1000 == 0:
+                self.get_logger().info('No obstacle detected')
 
 
 def main(args=None):

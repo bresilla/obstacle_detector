@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'obstacle_detector = obstacle_detector.obstacle_detector:main',
-            'obstacle_feedback = obstacle_detector.obstacle_feedback:main'
+            'obstacle_feedback = obstacle_detector.obstacle_feedback:main',
+            'feedback_test = obstacle_detector.fedback_test:main'
         ],
     },
 )
