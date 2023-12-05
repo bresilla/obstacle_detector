@@ -7,6 +7,7 @@ from std_msgs.msg import Bool, Float32MultiArray, Float32, Int8
 from rclpy.executors import MultiThreadedExecutor
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
+from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Pose
 from sensor_msgs.msg import NavSatFix
 import message_filters
@@ -84,7 +85,7 @@ class CameraSpinner(Node):
 
         self.color_cam = message_filters.Subscriber(self, Image, '/Pioneer3at/camera/image_color')
         self.depth_cam = message_filters.Subscriber(self, Image, '/Pioneer3at/range_finder/image')
-        self.odom_sub = message_filters.Subscriber(self, Pose, '/fix/odom')
+        self.odom_sub = message_filters.Subscriber(self, Odometry, '/fix/odom')
 
         self.mask_pub = self.create_publisher(Image, '/mask', 10)
         
@@ -124,8 +125,8 @@ class CameraSpinner(Node):
             obs_has_size.data = True
             obs_size.data = [0.0, 0.0, 0.0]
             obs_has_position.data = True
-            robot.position = odom_msg.position
-            robot.orientation = odom_msg.orientation
+            robot.position = odom_msg.pose.pose.position
+            robot.orientation = odom_msg.pose.pose.orientation
             obs_pose = obstacle_position(robot.position.x, robot.position.y, distance, angle)
             loc_position.position.x = obs_pose[0]
             loc_position.position.y = obs_pose[1]
