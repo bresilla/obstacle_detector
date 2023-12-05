@@ -111,7 +111,7 @@ class CameraSpinner(Node):
 
         bridge = CvBridge()
         rgb_image = bridge.imgmsg_to_cv2(rgb_msg, desired_encoding='passthrough')
-        depth_image = bridge.imgmsg_to_cv2(depth_msg, desired_encoding='passth rough')
+        depth_image = bridge.imgmsg_to_cv2(depth_msg, desired_encoding='passthrough')
 
         distance, angle, mask = getPositionFromBlob(rgb_image, depth_image, 'magenta')
         if distance == None or distance > 1.0:
